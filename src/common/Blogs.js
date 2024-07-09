@@ -52,22 +52,22 @@ const ProductItems = () => {
     setCategories(e.target.value);
   };
  
-  const deleteItemFromCart = async (id) => {
-    try {
-      remove(ref(db, `Products/${id}`));
-      console.log("delte");
-      setIsComponentUpdate("Item is Deleted");
-    } catch (error) {
-      console.error("Error deleting item:", error.message);
-    }
-  };
-  const updataItemFromCart = async (id) => {
-    try {
-      await update(ref(db, `Products${uid}/${id}`, {}));
-    } catch (error) {
-      console.error("Error deleting item:", error.message);
-    }
-  };
+  // const deleteItemFromCart = async (id) => {
+  //   try {
+  //     remove(ref(db, `Products/${id}`));
+  //     console.log("delte");
+  //     setIsComponentUpdate("Item is Deleted");
+  //   } catch (error) {
+  //     console.error("Error deleting item:", error.message);
+  //   }
+  // };
+  // const updataItemFromCart = async (id) => {
+  //   try {
+  //     await update(ref(db, `Products${uid}/${id}`, {}));
+  //   } catch (error) {
+  //     console.error("Error deleting item:", error.message);
+  //   }
+  // };
 
   return (
     <div>
